@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Itinerary Collective</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,35 +13,45 @@
     </header>
 
     <main>
-        <section class="post-form">
-            <h2>Create a New Itinerary</h2>
-            <form id="itineraryForm">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Menu</h2>
+                <input type="text" id="search" placeholder="Search itineraries...">
+                <button id="filter">Filter</button>
+                <button id="post">Post New Itinerary</button>
+            </aside>
 
-                <label for="country">Select Country:</label>
-                <select id="country" name="country" required>
-                    <!-- Add options for countries -->
-                    <option value="USA">USA</option>
-                    <option value="Canada">Canada</option>
-                    <option value="UK">UK</option>
-                    <!-- Add more countries as needed -->
-                </select>
+            <section class="itineraries">
+                <div class="itinerary-form">
+                    <h2>Create a New Itinerary</h2>
+                    <form id="itineraryForm">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
 
-                <label for="timeline">Timeline:</label>
-                <textarea id="timeline" name="timeline" rows="4" required></textarea>
+                        <label for="country">Select Country:</label>
+                        <select id="country" name="country" required>
+                            <!-- Add options for countries -->
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">UK</option>
+                            <!-- Add more countries as needed -->
+                        </select>
 
-                <label for="photos">Upload Photos:</label>
-                <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                        <label for="timeline">Timeline:</label>
+                        <textarea id="timeline" name="timeline" rows="4" required></textarea>
 
-                <button type="submit">Post Itinerary</button>
-            </form>
-        </section>
+                        <label for="photos">Upload Photos:</label>
+                        <input type="file" id="photos" name="photos" accept="image/*" multiple>
 
-        <section class="post-list" id="postList">
-            <h2>Recent Itineraries</h2>
-            <!-- Posts will be displayed here -->
-        </section>
+                        <button type="submit">Post Itinerary</button>
+                    </form>
+                </div>
+
+                <div class="post-list" id="postList">
+                    <!-- Posts will be displayed here -->
+                </div>
+            </section>
+        </div>
     </main>
 
     <script src="script.js"></script>
