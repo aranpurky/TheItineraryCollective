@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Itinerary Collective</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Itinerary Collective</h1>
+    </header>
+
+    <main>
+        <section class="post-form">
+            <h2>Create a New Itinerary</h2>
+            <form id="itineraryForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="country">Select Country:</label>
+                <select id="country" name="country" required>
+                    <!-- Add options for countries -->
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <!-- Add more countries as needed -->
+                </select>
+
+                <label for="timeline">Timeline:</label>
+                <textarea id="timeline" name="timeline" rows="4" required></textarea>
+
+                <label for="photos">Upload Photos:</label>
+                <input type="file" id="photos" name="photos" accept="image/*" multiple>
+
+                <button type="submit">Post Itinerary</button>
+            </form>
+        </section>
+
+        <section class="post-list" id="postList">
+            <h2>Recent Itineraries</h2>
+            <!-- Posts will be displayed here -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
